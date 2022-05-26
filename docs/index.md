@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: minima
 ---
 
 ## Junior Java Training Course
