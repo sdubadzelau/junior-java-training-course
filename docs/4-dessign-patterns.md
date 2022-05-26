@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: minima
 ---
 
 [![index.md](assets/back_main_page_icon_124174_32.png)](index.md) [Go to Contents](index.md)
