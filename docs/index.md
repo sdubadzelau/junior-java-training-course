@@ -1,7 +1,3 @@
----
-layout: minima
----
-
 ## Junior Java Training Course
 
 ### Contents
