@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 ## Junior Java Training Course
 
 ### Contents
