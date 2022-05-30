@@ -1,6 +1,4 @@
-## Junior Java Training Course
-
-### Contents
+## Contents
 
 1. [Java Basics](1-java-basics.md)
 2. [Version Control and Git](2-version-control-and-git.md)
