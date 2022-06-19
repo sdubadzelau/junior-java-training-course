@@ -6,3 +6,6 @@
 4. [Dessign Patterns](4-dessign-patterns.md)
 5. [Data Transmission Formats](5-data-transmissions-formats.md)
 6. [Linux Basics](6-linux-basics.md)
+7. [Build-Tolls-CI-CD](7a-build-tools-ci-cd.md)
+8. [Build-Tools-Gradle](7b-build-tools-gradle.md)
+9. [Unit-Testing-and-Mocking](8-unit-testing-and-mocking.md)
