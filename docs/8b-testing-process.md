@@ -53,3 +53,55 @@ Naming conventions: https://dzone.com/articles/7-popular-unit-test-naming
 - Introduce test coverage, what it is, and how it should be used
   - A: The test coverage report provides information about parts of the software where test coverage is being implemented. Essentially, it provides information about the tests executed on an application or website.
   - See more here: https://www.browserstack.com/guide/code-coverage-vs-test-coverage
+
+#### Other question list:
+1. What are unit tests and why we use them?
+2. What is TDD?
+3. Why we use red to green method?
+   1. The basic idea is no code is written before there is failing test (RED). When you have a failing test, then you write the code to pass the test (GREEN).
+4. How to test if code is throwing proper type of exception?
+   1. JUnit <= 4.12 : `@Test(expected = IndexOutOfBoundsException.class)`
+   2. JUnit > 4.13 : `assertThrown(callMethod)`
+      ```
+         @Test
+         public void testFooThrowsIndexOutOfBoundsException() {
+            Throwable exception = assertThrows(IndexOutOfBoundsException.class, () -> foo.doStuff());
+            assertEquals("expected messages", exception.getMessage());
+         }
+      ```
+   3. More examples : https://stackoverflow.com/questions/156503/how-do-you-assert-that-a-certain-exception-is-thrown-in-junit-4-tests/2935935#2935935
+5. What are Stubs? When we use them? (Stubbing third party services)
+6. How to use Stubs? (Write a stub, inject it to service, use in tests)
+7. What is the Mock?
+8. What is the most common library for using stubs/mocks?
+   1.  EasyMock, JMock, EasyMock 2, Mockito
+9. How to use mocks using mockito?
+10. How to check if the method from mock service was called?
+    1. To check if a method was called on a mocked object you can use the `Mockito.verify` method:
+       ```
+          Mockito.verify(someMock).bla();
+          Mockito.verify(someMock, Mockito.times(0)).bla();
+          Mockito.verify(someMock, Mockito.times(23)).bla();
+          Mockito.verify(someMock, Mockito.never()).bla(); // same as Mockito.times(0)
+          Mockito.verify(someMock, Mockito.atLeast(3)).bla(); // min 3 calls
+          Mockito.verify(someMock, Mockito.atLeastOnce()).bla(); // same as Mockito.atLeast(1)
+          Mockito.verify(someMock, Mockito.atMost(3)).bla(); // max 3 calls
+       ```
+11. How to use a wildcard in verify method (anyString())
+12. What is Fake object?
+13. When we use fakes?
+14. How to set up mocks for all tests methods?
+    1. ?
+15. What is tautology in test?
+    1. TTDD – Tautological Test Driven Development as an anti-pattern of TDD
+    2. Tautology Tests - They assert that the code is correct by ensuring the code executes as written which, of course, assumes the way it is written is correct.
+    3. What are the common characteristics of a Tautological Test?
+       1. Asserts more interactions with collaborators than the outputs;
+       2. It doesn’t really test the behaviour of the class, but only its implementation
+       3. The test is too white box
+       4. Too much mock setup deviates the intent of the test
+       5. Adding a new feature or changing an existing one requires changing mock expectations
+16. What is spy and why we use it?
+17. How to use Spy object?
+18. What are the FIRST principles of good unit tests
+19. What other good practices do you know? (http://www.kyleblaney.com/junit-best-practices/) 
