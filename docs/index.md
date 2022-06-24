@@ -10,4 +10,7 @@
 8. [Build-Tools-Gradle](7b-build-tools-gradle.md)
 9. [Unit-Testing-and-Mocking](8-unit-testing-and-mocking.md)
 10. [Testing Process](8b-testing-process.md)
-11. 
+
+
+
+P.S. [Questions for interview in the middle of the course](questions-for-interview.md)
