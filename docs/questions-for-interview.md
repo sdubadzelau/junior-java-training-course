@@ -5,7 +5,7 @@
 2. Where can we put final keyword?
 3. What could it be if we put the final keyword before the class?
 4. What 2 different types of exceptions do we have in Java?
-5. what 2 ways of exepcion handling do we have? (Propogations?)
+5. what 2 ways of exceptions handling do we have? (Propogations?)
 6. How can we close the file after using?
 7. If we open file, open chanel, read, then do close, what will happen? (Whon't be closed)
 8. Closable interface?
@@ -18,14 +18,21 @@
 15. What do notify and wait methods?
 16. Show code example and ask about checking deadlocks or other issue with resources.
 17. Question about incrementing with different threads.
+#### OOP
 18. What is the encapsulation?
-19. What is the polimorfism?
-20. Ask to write code as example of overriding methods and shows polimorfism.
+19. What is the polymorphism?
+20. What is the difference between abstract class and interface?
+21. Ask to write code as example of overriding methods and shows polimorfism.
+#### Patterns
 21. What is the builder pattern? And question about 5 or 12 parameters in constructor, Is this good candidate for constructor?
 22. What is the decorator pattern? Write an example.
+#### Tests
 23. What makes our tests good?
-24.
+24. 
 25. What is mock and hoow can we use it?
+#### Data transformation
+
+See questions on appropriate page
 ---------
 26. What does http request contain?
 27. What 3 layers are we using in the application?

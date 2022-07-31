@@ -10,6 +10,11 @@
 8. [Build-Tools-Gradle](7b-build-tools-gradle.md)
 9. [Unit-Testing-and-Mocking](8-unit-testing-and-mocking.md)
 10. [Testing Process](8b-testing-process.md)
+11. [Clean Code](9-clean-code.md)
+12. [Spring](10a-spring-core.md)
+13. [Spring-AOP](10b-spring-aop.md)
+14. [Spring-Boot](10c-spring-boot.md)
+15. [Java Persistence](11-java-persistence.md)
 
 
 

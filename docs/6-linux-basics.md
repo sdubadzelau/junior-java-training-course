@@ -26,7 +26,7 @@
    2. AppArmor ensures that programs only access what they're supposed to
    3. Application permissions managed inside config files like this e.g. /etc/apparmor.d/usr.bin.[appname], /etc/apparmor.d/usr.bin.man
       In naming AppArmor profiles, periods replace slashes in the absolute path to a program
-6. rConfiguring networking with NetworkManager
+6. Configuring networking with NetworkManager
    1. Controlling network settings
    2. /etc/network/interfaces
    3. nmtui - NetworkManager TUI
