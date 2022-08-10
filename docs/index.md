@@ -15,6 +15,9 @@
 13. [Spring-AOP](10b-spring-aop.md)
 14. [Spring-Boot](10c-spring-boot.md)
 15. [Java Persistence](11-java-persistence.md)
+16. [Spring Data](12-spring-data.md)
+17. [Introduction to Front-End](13-front-end-introduction.md)
+18. [Spring MVC](14-spring-mvc.md)
 
 
 

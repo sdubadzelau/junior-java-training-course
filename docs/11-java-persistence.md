@@ -94,9 +94,9 @@
          3. Managed state (After entity was persistent)
          4. Loaded from DB (also considered like persistent)
       2. States:
-         1. Managed - The entity is under control of EntityManager
+         1. **Managed** - The entity is under control of EntityManager
             1. It is automatically synchronized after using entity setter methods
-         2. Detached - The final state for an entity
+         2. **Detached** - The final state for an entity
             1. Detached
             2. Removed
             3. Flushed
