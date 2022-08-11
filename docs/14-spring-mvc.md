@@ -190,24 +190,129 @@
              ```
    3. Async Request Processing
       1. Conventional HTTP request processing
-      2. Async configuration
-      3. Return callable in Controller
-      4. DefferedResult implementation for async
+         1. ![](assets/14-conventional-http-request-processing.png)
+      2. Spring MVC async processing under the hood
+         1. Integrated with Servlet 3.0
+         2. Separate threads for request allocation and blocking calls
+         3. Enable the async processing for Spring MVC
+         4. Let controllers return either of the following:
+            1. Callable<T>
+            2. DeferredResult<T>
+         5. ![](assets/14-async-requests-under-the-hood.png)
+      3. Async configuration
+         1. Set async processing flag on DispatcherServlet (By default it is enabled in Spring Boot)
+         2. Add async processing configuration in WebConfig if needed
+            ```
+            @Override
+            protected void configureAsyncSupport(AsyncSupportConfigurer configurer) {
+               //eg setTimeout 
+               configurer.setTaskExecutor(mvcTaskExecutor());
+            }
+            
+            @Bean 
+            public AsyncTaskExecutor mvcTaskExecutor() {
+               ThreadPoolTaskExecutor tpte = new ThreadPoolTaskExecutor();
+               tpte.setThreadNamePrefix("ourapp-thread-");
+               return tpte;
+            }
+            ```
+         3. Return a Callable<String>/DeferredResult<String> from Controllers
+      4. Return callable in Controller
+         1. Return type Callable<String>
+         2. inside controller return comething callable, eg lambda, you can see that threads in controller
+            method and in lambda will be different.
+      5. DefferedResult implementation for async
+         1. Add `AsyncTaskExecutor` and return deferred result which will be filled with the result inside executor.
+         2. **Callable allows to return a value, while Runnable does not. DeferredResult is a class designed by Spring to allow more options (that I will describe) for asynchronous request processing in Spring MVC, and this class just holds the result (as implied by its name) while your Callable implementation holds the async code.**
    4. ViewResolvers
       1. What are view resolver?
+         1. Any MVC framework needs to render data in browsers
+         2. Works with 2 interfaces
+            1. View
+            2. ViewResolver
+         3. Types of view resolvers
+            1. `InternalResourceViewResolver` - eg maps jsp folder and file extensions 
+            2. `ResourceBundleViewResolver` - maps resources, eg property files
+            3. `XmlViewResolver`
+            4. `VelocityViewResolver`/`FreeMarkerViewResolver`
       2. Using `XmlViewResolver`
+         1. **The XmlViewResolver is used to resolve the view names using view beans defined in xml file.**
+         2. A ViewResolver implementation that uses bean definitions in a dedicated XML file for view definitions, specified by resource location. The file will typically be located in the WEB-INF directory; the default is "/WEB-INF/views.xml"
       3. Using `ResourceBundleViewResolver`
+         1. The ResourceBundleViewResolver is used to resolve the view names using view beans defined in the properties file.
+         2. views.properties
+            ```
+            hello.(class) = org.springframework.web.servlet.view.JstlView
+            hello.url = /WEB-INF/jsp/hello.jsp
+            ```
       4. Chaining view resolvers
+         1. Application can configure multiple view resolvers
+         2. Set order on each of then using setOrder API
+         3. Higher the order value, the later that view resolver is placed in the chain
    5. Interceptors and Themes
       1. Intro to interceptors
+         1. Similar to filter in Servlet API
+         2. Used for pre- and post-processing of the request
+         3. ![](assets/14-interceptors-in-spring-mvc.png)
       2. Built-in and custom interceptors
+         1. Implementations of `HandlerInterceptorAdapter`
+            1. preHandle
+            2. postHandle
+            3. afterCompletion - after response is committed
+         2. `ThemeChangeInterceptor`
+         3. `LocaleChangeInterceptor`
    6. Spring MVC REST Controllers
       1. RESTful services recap
-      2. Use @Controller abd @ResponseBody
-      3. Use @RequestController and @ResponseEntity
-      4. Use @PathVariable and @RequestParam to get request payload
-      5. Use @RequestBody and @ResponseEntity
-      6. Use @ExceptionHandler
+         1. Access resources on the web
+         2. Actions with simple and well-defined operations
+         3. Promotes interoperability between systems
+         4. Works with HTTP protocols:
+            1. GET - retrieve resources
+            2. POST - update resources
+            3. PUT - insert resources
+            4. DELETE - removes resources
+         5. Data Transfer in REST
+            1. XML/JSON used to transfer data between client and server
+            2. JSON vs. XML
+               1. XML is strict
+               2. JSON is convenient and lightweight
+               3. JSON needed for AJAX designs
+            3. Spring MVC MarshallingView for XML response to be rendered (through JAXB)
+            4. Spring MVC HttpMessageConvertors for JSON (Jakson by default)
+            5. No view name needed. Rest Controllers just return data.
+      2. Use `@Controller` abd `@ResponseBody`
+         1. `@ResponseBody` - says to Spring to represent the result as the Body of the response 
+      3. Use `@RequestController` and `@ResponseEntity`
+         1. `@RestController` combines `@Controller` abd `@ResponseBody` together
+         2. `@ResponseEntity` - information sent back to client about the request
+            1. ResponseEntity represents the whole HTTP response: status code, headers, and body. As a result, we can use it to fully configure the HTTP response.
+               If we want to use it, we have to return it from the endpoint; Spring takes care of the rest.
+               ResponseEntity is a generic type. Consequently, we can use any type as the response body:
+      4. Use `@PathVariable` and `@RequestParam` to get request payload
+         1. @PathVariable value should match the value from @GetMapping
+            ```
+            @GetMapping("/app/order/{id}")
+            public ResponseEntity getOrderById(@PAthVariable("id") Integer id) {
+               Order order = orderRepository.findById(id);
+               return ResponseEntity<>(order, HttpStatus.OK);
+            }
+            ```
+      5. Use `@RequestBody` and `@ResponseEntity`
+         1. @RequestBody - represents request body
+         2. ```
+            @PostMapping("/app/loginuser")
+            public ResponseEntity loginUser(@RequestBody Login login) {
+               sout(login.getUsername());
+               //get user from repository
+               if (user == null) {
+                  return ResponseEntity.status(404).build();
+               }
+               // etc
+            }
+            ```
+      6. Use `@ExceptionHandler`
+         1. 
       7. MVC bs REST controllers
+         1. ![](assets/14-mvc-controller-vs-rest-controller.png)
                
     
