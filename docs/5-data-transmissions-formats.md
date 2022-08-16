@@ -25,7 +25,7 @@
   * Cons: JAXB dosn't work in Android
 * JAXP
   * JAva API for XML Processing
-  * Sets standarts for APIs included in Java SE
+  * Sets standards for APIs included in Java SE
 * API that works in Android
   * SAX, DOM, XMLPullparser, JDOM 2.0.1 or later
 * We need to use namespaces if we want idntifite the concrete tag, if we have several diferent tag types with the same namespaces
@@ -54,7 +54,7 @@
   * Handle Class 
     * extends DefaultHandler
   * Track all data manually
-* DOM: Document Oobject Model
+* DOM: Document Object Model
   * Tree-style xml parser
   * Read and Write API
   * We can search Nodes with XPath

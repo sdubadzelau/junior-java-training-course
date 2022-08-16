@@ -33,7 +33,7 @@
 18. What is the encapsulation?
 19. What is the polymorphism?
 20. What is the difference between abstract class and interface?
-21. Ask to write code as example of overriding methods and shows polimorfism.
+21. Ask to write code as example of overriding methods and shows polymorphism.
 #### Patterns
 21. What is the builder pattern? And question about 5 or 12 parameters in constructor, Is this good candidate for constructor?
 22. What is the decorator pattern? Write an example.

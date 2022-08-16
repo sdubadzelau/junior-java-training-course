@@ -49,7 +49,6 @@
 ----
 ### Questions:
 
-
 1) What is GIT?
 
 GIT is a distributed version control system and source code management (SCM) system with an emphasis to handle small and large projects with speed and efficiency.

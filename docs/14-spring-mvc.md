@@ -261,6 +261,29 @@
             3. afterCompletion - after response is committed
          2. `ThemeChangeInterceptor`
          3. `LocaleChangeInterceptor`
+      3. Save and SessionAttributes
+         1. Need to add @SessionAttributes("modelName") to Controller an @ModelAttribute("modelName") to @ControllerAdvice class
+      4. Redirect and Forward
+         1. `return "redirect:http://www.linkedin.com";` - go outside application
+         2. `return "forward:/homepage";` - forwarding in the scope of the same context
+      5. Define themes and theme resolver
+         1. Define 2 separate themes (CSS resources)
+         2. Define respective properties files for those themes
+         3. Use on1 of the ThemeResolver to decide which theme to use:
+            1. CookieThemeResolver
+               1. add ThemeResolver inside ApplicationConfig
+               2. set CookieName, set DefaultThemeName(one of property files)
+               3. Add ThemeChangeInterceptor
+               4. Use `<spring:theme/>` to refer themed keys from .properties file on the JSP
+                  ```<link rel="stylesheet" href="<spring:theme code='styleSheet'/>" type="test/css" />'```
+            2. SessionThemeResolver
+            3. FixedThemeResolver
+      6. Localization and Internationalization
+         1. Localization - getting the labels from one location(property file)
+            1. LocaleResolver
+            2. Default implementation: AcceptHeaderLocalResolver
+         2. Internationalization - Use different localization file for different languages
+            1. Add Locale resolver to ApplicationConfig.java
    6. Spring MVC REST Controllers
       1. RESTful services recap
          1. Access resources on the web
