@@ -131,12 +131,13 @@
       1. Handled by `DispetcherServlet`
       2. Delegates to HandlerExceptionResolver beans
       3. What does exception handling mean in an application?
-         1. Spring MVC provides exception handling for your web application to make sure you are sending your own exception page instead of the server-generated exception to the user.
+         1. Spring MVC provides exception handling for your web application to make sure you are sending your 
+            own exception page instead of the server-generated exception to the user.
       4. Wy is it needed?
          1. It is more convenient to see well formatted understandable message than Stacktrace
       5. Types
          1. `ExceptionHandlerExceptionResolver` - define exception handler methods in controllers
-         2. `SimpleMAppingExceptionResolver` - map each exception class with an error page
+         2. `SimpleMappingExceptionResolver` - map each exception class with an error page
          3. `DefaultHandlerExceptionResolver` - default which maps exceptions to error code
          4. `ResponseStatusExceptionResolver` - resolves custom exception using status code defined in `@ResponseStatus`
       6. Create custom error page
@@ -335,7 +336,7 @@
             ```
       6. Use `@ExceptionHandler`
          1. 
-      7. MVC bs REST controllers
+      7. MVC vs REST controllers
          1. ![](assets/14-mvc-controller-vs-rest-controller.png)
                
     
