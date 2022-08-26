@@ -231,16 +231,19 @@ Kanban = Kan(Visual) + Ban(Card)
 2. How do Agile stakeholders regard change?
    1. Agile developers welcome change and work with the customer.
 3. Why are self-organizing teams better in an Agile approach?
-   1. Self-organizing teams have a better understanding of what needs to get done because they are directly involved in the process. 
+   1. Self-organizing teams have a better understanding of what needs to get done
+      because they are directly involved in the process. 
 4. What is a self-organized team? 
    1. A team that knows how to do their work without help from outside.
 5. Consider this quote: "Simplicity--the art of maximizing the amount
    of work not done--is essential." What does this quote mean?
-   1. Agile Teams work on features that are really needed. Nothing more. Nothing less. The other options are incorrect explanations of this agile principle.
+   1. Agile Teams work on features that are really needed. Nothing more. Nothing less. 
+      The other options are incorrect explanations of this agile principle.
 6. After an iteration is made, what is the first stage of the next iteration?
    1. After an iteration, a new set of requirements is defined. 
 7. Why is frequent customer feedback necessary in Agile development? 
-   1. It is a best practice to provide the feedback early, and make changes prior to implementing the system into production.
+   1. It is a best practice to provide the feedback early,
+      and make changes prior to implementing the system into production.
 #### Scrum
 8. How is the scrum master role different than the top management role? 
    1. They are servants to the project, and should be advocates of the scrum and Agile approach.
@@ -248,8 +251,10 @@ Kanban = Kan(Visual) + Ban(Card)
    1. The team can discuss the status of the scrum, and then make changes as necessary.
 10. What are 3 pillars of Scrum?
     1. transparency, inspection, and adaptation
-11. What are three components within the product backlog?
-    1. requirements, user stories, and enhancements. (Product backlogs are the to-dos for the project, and contain many components that outline what needs to get done.)
+11. What are 3 components within the product backlog?
+    1. requirements, user stories, and enhancements. 
+       (Product backlogs are the to-dos for the project, and contain many components that outline what
+       needs to get done.)
 12. Why is the product implement important? 
     1. It represents the completed deliverables, and should have some business value. 
 13. What are some of the product owner's key responsibilities? 
@@ -259,13 +264,17 @@ Kanban = Kan(Visual) + Ban(Card)
 15. How is the development team organized in scrum? 
     1. Self-organized
 16. Which skills should members of the development team possess?
-    1. multiple IT skills - The development team should have multiple IT skills in order to view different tasks in different ways.
+    1. Multiple IT skills - The development team should have multiple 
+       IT skills in order to view different tasks in different ways.
 17. How is focus one of the important values of scrum? 
-    1. There are specific deliverables for certain durations of time. - Small deliverables are usually made within a two-week timeframe, and should be met in the designated durations of time.
+    1. There are specific deliverables for certain durations of time. 
+    - Small deliverables are usually made within a two-week timeframe, 
+    - and should be met in the designated durations of time.
 18. What is a Daily Scrum?
     1. An opportunity for the Development Team to synchronize their work.
 19.  When is the sole use of Agile tools inefficient within the scrum? 
-    1. when the stakeholders lack the adoption of Agile. - All stakeholders need to adopt the Agile methodology in order for it to succeed.
+    1. when the stakeholders lack the adoption of Agile. 
+       - All stakeholders need to adopt the Agile methodology in order for it to succeed.
 #### Agile Software Engineering Techniques
 20. How should a widening gap between the completed work and total scope be interpreted in a Burn Up Chart?
     1. There is too much work, and it will probably be unachievable before the sprint completes. 
@@ -276,15 +285,22 @@ Kanban = Kan(Visual) + Ban(Card)
 23. How is the Fibonacci Scale used in Agile estimation? 
     1. It is used to rank the difficulty and scope of backlogged product deliverables. 
 24. When is planning poker appropriate? 
-    1. when estimating user stories - Planning poker is a method that involves all stakeholders coming to a consensus, where each suggests a result and presents it to the team.
+    1. when estimating user stories 
+    - Planning poker is a method that involves all stakeholders coming to a consensus,
+    - where each suggests a result and presents it to the team.
 25. How does test-driven development expose poorly designed monolithic code?
-    1. If the code is too large, it is difficult to develop specific tests. - If the development team is struggling to define the test, then the code might need to be broken down to work with it.
-26. There are three categories within the user stories. What is the purpose of the final category? 
-    1. It shows the end results or reason why the user story exists. - The final category defines what needs to get done for the user story.
+    1. If the code is too large, it is difficult to develop specific tests. 
+       - If the development team is struggling to define the test, 
+         then the code might need to be broken down to work with it.
+26. There are 3 categories within the user stories. What is the purpose of the final category? 
+    1. It shows the end results or reason why the user story exists. 
+       - The final category defines what needs to get done for the user story.
 27. Why is pair programming an important part of Extreme Programming (XP)? 
-    1. It enables new perspectives by having the coder and monitor switch roles. - By having the roles of coder and monitor switched, there can be fresh, new viewpoints.
+    1. It enables new perspectives by having the coder and monitor switch roles. 
+       - By having the roles of coder and monitor switched, there can be fresh, new viewpoints.
 28. How are customers integrated within Extreme Programming (XP)?
-    1. Customers are included within the project. - One notable aspect of Extreme Programming is that customers are always included.
+    1. Customers are included within the project. 
+       - One notable aspect of Extreme Programming is that customers are always included.
 29. What is the first phase of XP execution?
     1. Tests are written. - Tests are done prior to the XP execution in order to determine what are valid and invalid results.
 #### Kanban
@@ -299,7 +315,8 @@ Kanban = Kan(Visual) + Ban(Card)
 33. What is one similarity between Kanban and scrum? 
     1. Both scrum and Kanban are used within the Agile process.
 34. What is a difference between scrum and Kanban?
-    1. Scrum is a framework, while Kanban is a process management tool. - `Scrum is a methodology, while Kanban contains a tool to list project backlogs and how they are to be completed.` 
+    1. Scrum is a framework, while Kanban is a process management tool. 
+       - `Scrum is a methodology, while Kanban contains a tool to list project backlogs and how they are to be completed.` 
 35. What is the first step in the Kanban board? 
     1. planning coordination - `The Kanban board is a visual tool that allows users to drag items from the product backlog to the planning coordination stage.`
 #### Scaling Agile
